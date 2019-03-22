@@ -1,0 +1,57 @@
+<style>
+	button { width: 100%; padding: 5px; }
+</style>
+<script>
+	function setVal(val) {
+		document.getElementById("angkainput").value += val;
+	}
+	function dele(){
+		var str = document.getElementById("angkainput").value;
+		str = str.slice(0, -1);
+		document.getElementById("angkainput").value = str;
+	}
+	function setResult() {
+		var count = eval(document.getElementById("angkainput").value);
+		if (document.getElementById("angkainput").value == "") {
+			document.getElementById("angkainput"). value == "";
+		}else{
+			document.getElementById("angkainput").value = count;
+		}
+	}
+</script>
+<center>
+	<h2>kalkulator sederhana</h2>
+	<table>
+		<tr>
+			<td colspan="5"><input type="text" name="angkainput" id="angkainput"></td>
+		</tr>
+		<tr>
+			<td><button onclick="setVal(7);">7</button></td>
+			<td><button onclick="setVal(8);">8</button></td>
+			<td><button onclick="setVal(9);">9</button></td>
+			<td rowspan="3"><button onclick="dele();">Del</button></td>
+		</tr>
+		<tr>
+			<td><button onclick="setVal(4);">4</button></td>
+			<td><button onclick="setVal(5);">5</button></td>
+			<td><button onclick="setVal(6);">6</button></td>
+		</tr>
+		<tr>
+			<td><button onclick="setVal(1);">1</button></td>
+			<td><button onclick="setVal(2);">2</button></td>
+			<td><button onclick="setVal(3);">3</button></td>
+		</tr>
+		<tr>
+			<td colspan="2"><button onclick="setVal(0);">0</button></td>
+			<td><button onclick="setVal('.');">.</button></td>
+			<td><button onclick="setResult();">=</button></td>
+
+		</tr>
+		<tr>
+			<td><button onclick="setVal('+');">+</button></td>
+			<td><button onclick="setVal('*');">x</button></td>
+			<td><button onclick="setVal('-');">-</button></td>
+			<td><button onclick="setVal('/');">/</button></td>
+		</tr>
+	</table>
+</center>
